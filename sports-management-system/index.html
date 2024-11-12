@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Management System - Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f4; }
+    .container { text-align: center; width: 300px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    .role-btn { padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+    .athlete { background-color: #4CAF50; color: white; }
+    .coach { background-color: #2196F3; color: white; }
+    .admin { background-color: #f44336; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to Sports Management System</h2>
+    <p>Select your role to proceed:</p>
+    <button class="role-btn athlete" onclick="location.href='athlete-dashboard.html'">Athlete</button>
+    <button class="role-btn coach" onclick="location.href='coach-dashboard.html'">Coach</button>
+    <button class="role-btn admin" onclick="location.href='admin-dashboard.html'">Admin</button>
+  </div>
+</body>
+</html>
