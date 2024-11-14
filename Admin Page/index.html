@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Management Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#events">Upcoming Events</a></li>
+      <li><a href="#athletes">Athletes</a></li>
+      <li><a href="#performance">Performance</a></li>
+      <li><a href="#leaderboard">Leaderboard</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#reminders">Event Reminders</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <!-- Dashboard Section -->
+    <section id="dashboard">
+      <h1>Dashboard</h1>
+      <div class="stats">
+        <div class="card">
+          <h3>Upcoming Events</h3>
+          <p id="event-count">0</p>
+        </div>
+        <div class="card">
+          <h3>Athletes</h3>
+          <p id="athlete-count">0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="events">
+      <h2>Manage Upcoming Events</h2>
+      <input type="text" id="search-events" placeholder="Search Events" onkeyup="searchEvents()">
+      <button id="add-event-btn" onclick="openEventModal()">Add Event</button>
+
+      <div id="event-list">
+        <!-- Event list will be populated here -->
+      </div>
+    </section>
+
+    <!-- Athlete Registration Section -->
+    <section id="athletes">
+      <h2>Manage Athletes</h2>
+      <button id="add-athlete-btn" onclick="openAthleteModal()">Add Athlete</button>
+      <div id="athlete-list">
+        <!-- Athlete list will be populated here -->
+      </div>
+    </section>
+
+    <!-- Athlete Performance Graph Section -->
+    <section id="performance">
+      <h2>Athlete Performance</h2>
+      <canvas id="performanceGraph"></canvas>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section id="leaderboard">
+      <h2>Real-Time Leaderboard</h2>
+      <select id="filter-sport" onchange="filterLeaderboard()">
+        <option value="all">All Sports</option>
+        <option value="soccer">Soccer</option>
+        <option value="basketball">Basketball</option>
+        <option value="tennis">Tennis</option>
+      </select>
+      <ul id="leaderboard-list">
+        <!-- Real-time leaderboard will be populated here -->
+      </ul>
+    </section>
+
+    <!-- Event Reminder Section -->
+    <section id="reminders">
+      <h2>Event Reminders</h2>
+      <div id="reminder-list">
+        <!-- List of event reminders -->
+      </div>
+      <button onclick="openReminderModal()">Add Reminder</button>
+    </section>
+
+    <!-- Notifications Section -->
+    <section id="notifications">
+      <h2>Real-Time Notifications</h2>
+      <div id="notification-list">
+        <!-- Notifications will appear here -->
+      </div>
+    </section>
+
+    <!-- Modal for Adding/Editing Events -->
+    <div id="event-modal" class="modal">
+      <div class="modal-content">
+        <h2>Add/Edit Event</h2>
+        <label for="event-name">Event Name:</label>
+        <input type="text" id="event-name" required>
+        <label for="event-date">Event Date:</label>
+        <input type="datetime-local" id="event-date" required>
+        <button onclick="saveEvent()">Save Event</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for Athlete Registration -->
+    <div id="athlete-modal" class="modal">
+      <div class="modal-content">
+        <h2>Add Athlete</h2>
+        <label for="athlete-name">Athlete Name:</label>
+        <input type="text" id="athlete-name" required>
+        <label for="athlete-sport">Sport:</label>
+        <input type="text" id="athlete-sport" required>
+        <label for="athlete-performance">Performance Score:</label>
+        <input type="number" id="athlete-performance" required>
+        <button onclick="saveAthlete()">Save Athlete</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Modal for Adding Event Reminders -->
+    <div id="reminder-modal" class="modal">
+      <div class="modal-content">
+        <h2>Add Reminder</h2>
+        <label for="reminder-event">Event:</label>
+        <input type="text" id="reminder-event" required>
+        <label for="reminder-time">Reminder Time:</label>
+        <input type="datetime-local" id="reminder-time" required>
+        <button onclick="saveReminder()">Save Reminder</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
