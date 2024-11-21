@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Sports Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="feedback.js" defer></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Player Panel</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="events.html">Upcoming Events</a></li>
+      <li><a href="performance.html">Performance</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="reminders.html">Event Reminders</a></li>
+      <li><a href="assistance.html">Request Assistance</a></li>
+      <li><a href="athlete-details.html">Athlete Details</a></li>
+      <li><a href="training-schedule.html">Training Schedule</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <section id="feedback">
+      <h1>Feedback</h1>
+      <div class="feedback-buttons">
+        <button id="coach-feedback-btn">Provide Feedback for Coach</button>
+        <button id="event-feedback-btn">Provide Feedback for Event</button>
+      </div>
+
+      <!-- Coach Feedback Modal -->
+      <div class="modal" id="coach-feedback-modal">
+        <div class="modal-content">
+          <h2>Provide Feedback for Coach</h2>
+          <textarea id="coach-feedback" placeholder="Write your feedback here..."></textarea>
+          <button id="submit-coach-feedback">Submit Feedback</button>
+          <button id="close-coach-modal">Close</button>
+        </div>
+      </div>
+
+      <!-- Event Feedback Modal -->
+      <div class="modal" id="event-feedback-modal">
+        <div class="modal-content">
+          <h2>Provide Feedback for Event</h2>
+          <textarea id="event-feedback" placeholder="Write your feedback here..."></textarea>
+          <button id="submit-event-feedback">Submit Feedback</button>
+          <button id="close-event-modal">Close</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

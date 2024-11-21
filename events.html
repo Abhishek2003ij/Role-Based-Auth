@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Events | Sports Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="events.js" defer></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Player Panel</h2>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="events.html">Upcoming Events</a></li>
+      <li><a href="performance.html">Performance</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="reminders.html">Event Reminders</a></li>
+      <li><a href="assistance.html">Request Assistance</a></li>
+      <li><a href="athlete-details.html">Athlete Details</a></li>
+      <li><a href="training-schedule.html">Training Schedule</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <section id="register-events">
+      <h1>Register for Upcoming Events</h1>
+      <div class="event-list" id="event-list">
+        <!-- Sample events will be dynamically populated here -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Registration Modal -->
+  <div class="modal" id="registration-modal">
+    <div class="modal-content">
+      <h2>Register for Event</h2>
+      <form id="registration-form">
+        <input type="email" id="email" placeholder="Enter your Email" required>
+        <input type="tel" id="phone" placeholder="Enter your Phone Number" required>
+        <input type="number" id="age" placeholder="Enter your Age" required>
+        <button type="submit">Register</button>
+        <button type="button" id="close-modal">Close</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
