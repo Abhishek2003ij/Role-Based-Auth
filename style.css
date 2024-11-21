@@ -1,0 +1,314 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+    width: 100%;
+    background-color: #e6f2ff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px; /* Slightly wider sidebar */
+    background-color: #1891d1;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px; /* More space for readability */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 20px; /* More padding for better touch targets */
+    font-size: 18px;
+    border-radius: 25px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li.active a {
+    background-color: #e6f2ff;
+    color: #1891d1;
+}
+
+.sidebar ul li a ion-icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 280px; /* Adjusted to align with the new sidebar width */
+    width: calc(100% - 280px);
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #e6f2ff;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: #002960;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 26px;
+    color: #1d64c2;
+    margin-top: 30px; /* Larger margin for separation */
+}
+
+/* Input Styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button Styling */
+/* Button Styling */
+button {
+    background-color: #1d64c2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 15px; /* Added space between buttons */
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Athlete Image Preview */
+#athlete-image-preview {
+    max-width: 250px;
+    margin-top: 15px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Card layout for stats */
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9cdef5;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Improved responsiveness */
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 36px;
+    color: black;
+    font-weight: 500;
+}
+
+/* Event List */
+.event-item, .athlete-item, .reminder-item {
+    background-color: #ceecf6;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #002960;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+/* Table styles for training schedule */
+.schedule-table {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #1891d1;
+    color: white;
+  }
+  
+  td {
+    background-color: #ceecf6;
+  }
+  
+  /* Card layout for stats */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9cdef5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100% / 4 - 15px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding: 10px;
+    }
+    
+    .schedule-table {
+      overflow-x: auto;
+    }
+  }
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar h2 {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
